@@ -1,0 +1,184 @@
+/* 
+    Document   : site.css
+    Created on : Aug 17, 2012, 9:27:16 AM
+    Author     : MarkDennis
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body{
+
+    background-color: cornflowerblue;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: arial,sans-serif;
+    font-size: 1em;
+}
+
+#header
+{
+    width: 960px;
+    height: 137px;
+    background-color: #0134c5;
+    padding: 0px;
+}
+
+#header table
+{
+    width:960px;
+    align:left;
+
+}
+
+#footer
+{
+    width: 940px;
+    height: 100px;
+    background-color: #0134c5;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    text-decoration-color:none;
+    line-height: 5px;
+
+}
+
+#footer a:link
+{
+    color:white;
+}
+
+
+#main{
+    width: 960px;
+    height: 400px;
+    background-color: cornsilk;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#main fieldset
+{
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main table{
+    margin-left:auto;
+    margin-right: auto;
+}
+#hleft{
+    float: left;
+    width:181px;
+    height: 137px;
+    background-image: url("cmt_logo2.gif");
+}
+
+#hright{
+    float: left;
+    width: 568px;
+    height: 137px;
+    background-image: url("cmt_caduceus_sm.jpg");
+}
+
+#hprompt{
+    float:left;
+    height: 137px;
+    width: 211px;
+    text-align: center;
+    color: white;
+    /*    line-height: 25px;*/
+    padding-top: 45px;
+}
+
+
+#hprompt p{
+    font-size: 1.5em;
+    color: bisque;
+}
+
+#hprompt a{
+    color: yellow;
+}
+#hprompt a:hover{
+    color: lightskyblue;
+}
+
+#left{
+    float: left;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    /*    border: thin solid red;*/
+}
+
+#right{
+    width: 400px;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    /*    border: thin solid red;*/
+}
+
+.forminput{
+    text-align: left;
+}
+
+.vspace
+{
+    height: 25px;
+}
+
+#scrollcontent{
+    margin-left: auto;
+    margin-right: auto;
+    width:500px;
+    height: 325px;
+    overflow-y:scroll;
+    /*    border-color:Silver;
+        border-style:Double;*/
+    background-color: bisque;
+}
+
+.error{
+
+    display: inline;
+    color:Red;
+    /*    border: 1px solid red;*/
+    background-color: bisque;
+    margin-top: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+
+.question{
+    text-align: left;
+    padding: 10px 0 10px 10px;
+    margin: 10px 0 20px 0;
+    background-color: bisque;
+   
+}
+
+.response{
+    text-align: left;
+    padding-left: 40px;
+    height: 30px;
+}
+
+.submit{
+    font-size: 1.5em;
+}
+.left{
+    margin-left: 40%;
+   
+    
+}

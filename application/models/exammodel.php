@@ -65,8 +65,9 @@ class Exammodel extends CI_Model {
     function exam_end($pin) {
         // ends exam, posts finished time, score exam and trigger results email
         //get and post finished time
-        //alreadydone = $this->test_for_finished($pin);
-        //if (alreadydone != 1 ) {
+        $alreadydone = $this->test_for_finished($pin);
+        
+        if ($alreadydone == 0) {
             $datetime = date('Y-m-d H:i:s', time());
             $data = array(
                 'Finished' => $datetime,);
@@ -79,8 +80,8 @@ class Exammodel extends CI_Model {
             $this->post_score($pin, $correct);
             $this->logger->log($pin, 'Exam end');
     
-            $to = 'onlinejuris@cmtbc.ca,info@cmtbc.ca,adam@veritagroup.com,markndendev@gmail.com';
-            //$to = 'adam@veritagroup.com,marknden@gmail.com';
+            //$to = 'onlinejuris@cmtbc.ca,info@cmtbc.ca,adam@veritagroup.com,markndendev@gmail.com';
+            $to = 'markndendev@gmail.com';
             $subject = 'Examinee ' . $pin . ' has completed their Jurisprudence exam';
             $message = '<html>This is an automatically generated e-mail notification.<br/><hr/>
                 <ul>
@@ -99,7 +100,7 @@ class Exammodel extends CI_Model {
             $this->load->view('Site/header', $hdata);
             $this->load->view('Examinee/complete');
             $this->load->view('Site/footer');   
-       // }
+        }
         
     }
 
@@ -117,6 +118,7 @@ class Exammodel extends CI_Model {
         $secsleft = $this->session->userdata('examtime') - $elapsed;
         //echo $secsleft;
         //post elapsed time
+        
         if ($secsleft <= 0) {
             $this->logger->log($pin, 'Time Expired');
             $this->exam_end($pin);
@@ -331,13 +333,14 @@ class Exammodel extends CI_Model {
     }
 
     // no longer used
+    /*
 	function email_results($pin, $correct) {
         if (!$this->session->userdata('scoreemail')) {
             // Email account and to information
             $ACCOUNT = 'admin@markndennis.com';
             $PASSWORD = 'public01';
             //$EMAILTO = 'marknden@gmail.com';
-            $EMAILTO = 'marknden@gmail.com,adam@veritagroup.com,deputyregistrar@cmtbc.bc.ca';
+            $EMAILTO = 'markndendev@gmail.com';
             $MESSAGE = '<html>Examinee <strong>' . $pin . '</strong> has completed their exam.<br/>  The number of correct answers was <strong>' . $correct . '</strong>. <br/>This information has been logged and can be accessed from the List Examinees page.</html>';
             $SUBJECT = 'Examinee ' . $pin . ' has completed their exam';
 
@@ -370,7 +373,7 @@ class Exammodel extends CI_Model {
             //echo $this->email->print_debugger();
         }
     }
-
+    */
 }
 
 /* End of file exammodel.php */

@@ -8,7 +8,7 @@
         <META HTTP-EQUIV="expires" CONTENT="0">
 
         <link href="<?php echo base_url('/assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" />
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="//code.jquery.com/jquery-latest.js"></script>
         <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
         <title><?php echo $pagetitle; ?></title>
     </head>

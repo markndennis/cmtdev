@@ -7,17 +7,17 @@ function email_send($to,$subject,$message, $attachment='') {
         // Email account and to information
         //$ACCOUNT = 'onlinejuris@veritagroup.com';
         //$PASSWORD = 'HZIz5FA12GCRjKqMLKSN';    
-        $ACCOUNT = 'onlinejuris@cmtbc.ca';
-        $PASSWORD = '';    
+        $ACCOUNT = 'markndendev@gmail.com';
+        $PASSWORD = 'Safety01';    
 
         // Email configuration
         //$config['mailpath'] = "/usr/sbin/sendmail";
         $config['protocol'] = "smtp";
         //$config['smtp_host'] = "mail.veritagroup.com";
-        $config['smtp_host'] = "barracuda.seatosky.com";
+        $config['smtp_host'] = "ssl://smtp.gmail.com";
         $config['smtp_user'] = $ACCOUNT;
         $config['smtp_pass'] = $PASSWORD;
-        $config['smtp_port'] = "25";
+        $config['smtp_port'] = "465";
         $config['mailtype'] = "html";
         $config['wordwrap'] = "TRUE";
         $config['charset'] = "utf-8";

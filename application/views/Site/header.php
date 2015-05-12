@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
         <link href="<?php echo base_url('/assets/bootstrap/css/bootstrap.css'); ?>" rel="stylesheet">
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="//code.jquery.com/jquery-latest.js"></script>
         <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
         <title><?php echo $pagetitle; ?></title>
         

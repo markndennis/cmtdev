@@ -94,8 +94,10 @@
                             if (m <= 0 && s <= 0) {
                                 m = 0;
                                 s = 0;
-                                location.reload();
-                                //posttime()
+                                //location.reload();
+                                posttime()
+                                redirurl="<?php echo site_url('/exam/endexam') ?>";
+                                window.location.replace(redirurl);
                             }
                             ;
 
@@ -110,7 +112,6 @@
                         function posttime() {
                             deriveurl="<?php echo site_url("/exam/calculatetimeleft") ?>";
                             $.post(deriveurl);
-                            //location.reload();
 
                         }
                         ;

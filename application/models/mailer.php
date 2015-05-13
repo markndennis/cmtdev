@@ -5,8 +5,6 @@ class Mailer extends CI_Model {
 function email_send($to,$subject,$message, $attachment='') {
 
         // Email account and to information
-        //$ACCOUNT = 'onlinejuris@veritagroup.com';
-        //$PASSWORD = 'HZIz5FA12GCRjKqMLKSN';   
         $prefix = 'marknden';
         $suffix = 'ety01';
         $ACCOUNT = $prefix . 'dev@gmail.com';
